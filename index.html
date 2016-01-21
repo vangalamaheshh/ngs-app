@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>ngs-app</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link href='https://api.mapbox.com/mapbox.js/v2.2.3/mapbox.css' rel='stylesheet' />
+	<link href="ngs.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="jquery/jquery-1.11.3.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src='https://api.mapbox.com/mapbox.js/v2.2.3/mapbox.js'></script>
+  	</head>
+  	<body>
+	<div id="parent" class="row">
+		<div id="login">
+			<div class="col-md-8 col-md-offset-2">
+				<div style="display:table;" class="input-group">
+            		<span style="width: 1%;" class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+            		<input type="text" autofocus="autofocus" autocomplete="off" placeholder="Search Here" name="search" style="" class="form-control">
+          		</div>
+			</div>
+		</div>
+	 	<div id="map"></div>
+		<script>
+			L.mapbox.accessToken = 'pk.eyJ1IjoibXZhbmdhbGEiLCJhIjoidFVSRGw4ZyJ9.D8-sMcQCisPAzyP9T0mekA';			
+			var map = L.mapbox.map('map', 'mapbox.streets', {
+    // These options apply to the tile layer in the map.
+    tileLayer: {
+        // This map option disables world wrapping. by default, it is false.
+        continuousWorld: false,
+        // This option disables loading tiles outside of the world bounds.
+        noWrap: true
+    }
+}).setView([40, 0], 2);
+		</script>
+	</div>
+ 	</body>
+</html>

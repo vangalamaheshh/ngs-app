@@ -1,0 +1,17 @@
+html,body {
+	height: 100%;
+}
+
+#parent {
+	height: 100%;
+}
+
+#login {
+	height: 50px;
+	padding: 10px;
+}
+
+
+#map {
+	height: calc(100% - 50px);
+}
